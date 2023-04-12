@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "353864667685",
+    "project_id": "studynshortfinal",
+    "storage_bucket": "studynshortfinal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353864667685:android:fca734b3464f64c06c25cc",
+        "android_client_info": {
+          "package_name": "com.example.studynshort"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353864667685-numqmfjr8igit6lujlev0nsjoip1p7cu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADqg7DWhURVmiD2oYwpBkHxulIW1ZgdLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353864667685-numqmfjr8igit6lujlev0nsjoip1p7cu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
