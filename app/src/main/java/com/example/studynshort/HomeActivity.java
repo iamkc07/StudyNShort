@@ -16,7 +16,10 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            Window window = this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.top));
+        }
 
 
 
