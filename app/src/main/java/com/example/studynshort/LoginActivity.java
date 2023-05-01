@@ -170,7 +170,7 @@ public class LoginActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-   /* @Override
+ @Override
     protected void onStart() {
         super.onStart();
         if (mAuth.getCurrentUser() != null){
@@ -181,5 +181,5 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this, "You can logged now", Toast.LENGTH_SHORT).show();
 
         }
-    } */
+    }
 }

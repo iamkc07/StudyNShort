@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="15dp"
+    android:padding="10sp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="2dp"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/light_yellow"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/web_image"
+            android:layout_width="80dp"
+            android:layout_height="130dp"
+            android:src="@drawable/html"
+            />
+
+        <TextView
+            android:id="@+id/web_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/web_image"
+            android:layout_marginLeft="13dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/robotoregular"
+            android:textColor="@color/black"
+            android:text="HTML" />
+
+        <TextView
+            android:id="@+id/web_desp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/web_title"
+            android:layout_toRightOf="@+id/web_image"
+            android:layout_marginLeft="13dp"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:fontFamily="@font/alata"
+            android:text="Download  all the high quality notes and play quiz to test your knowledge." />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

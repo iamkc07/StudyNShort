@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,117 +7,615 @@
     android:background="@color/white"
     tools:context=".HomeActivity">
 
-    <LinearLayout
+
+
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="175dp"
+android:elevation="2dp"
+android:background="@color/light_blue"
+android:orientation="vertical">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="38dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:paddingLeft="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/navigationbar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/amarante"
+        android:text="Get A Notes"
+        android:textColor="@color/dark_purple"
+        android:textSize="@dimen/_22ssp"
+        android:textFontWeight="600"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/serachbox"
+        android:drawableEnd="@drawable/baseline_search_24"
+        android:drawablePadding="6dp"
+        android:hint="Search"
+        android:padding="12dp"
+        android:textColor="@color/dark_purple"
+        android:fontFamily="@font/alata"
+        android:textColorHint="@color/dark_purple"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_title" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/top">
 
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="29dp"
-                android:fontFamily="@font/robotocondensed_bold"
-                android:text="Hello !"
-                android:textColor="@color/dark_purple"
-                android:textSize="@dimen/_25ssp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.065"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/robotoregular"
-                android:text="Karan Chaurasiya"
-                android:textColor="@color/dark_purple"
-                android:textSize="@dimen/_14ssp"
-                app:layout_constraintEnd_toStartOf="@+id/imageView5"
-                app:layout_constraintHorizontal_bias="0.184"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+<ScrollView
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/firstcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:background="@color/white"
+        android:layout_marginTop="190dp"
+        android:layout_marginRight="33dp"
+        android:outlineAmbientShadowColor="@color/black">
+
+
+
+        <RelativeLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/dark_purple"
+            android:padding="8dp"
+            tools:ignore="MissingConstraints">
+
 
             <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="117dp"
-                android:layout_height="96dp"
-                android:layout_marginTop="11dp"
-                android:layout_marginBottom="12dp"
-                app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView5"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icon"
-                tools:ignore="MissingConstraints" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="55dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/serachbox"
-                android:drawableStart="@drawable/baseline_search_24"
-                android:drawablePadding="@dimen/_10sdp"
-                android:hint="Search"
-                android:inputType="textPersonName"
-                android:padding="@dimen/_10sdp"
-                android:textColor="@color/dark_purple"
-                android:textColorHint="@color/dark_purple"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                app:layout_constraintVertical_bias="1.0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/image_bca"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:fontFamily="@font/robotoregular"
-                android:text="Degree Notes"
-                android:textColor="@color/dark_purple"
-                android:textSize="@dimen/_12ssp"
-                android:textStyle="bold"
+                android:layout_weight="1"
+                android:padding="4dp"
+                app:srcCompat="@drawable/computer" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="BCA"
+            android:fontFamily="@font/alata"
+
+            android:textColor="@color/dark_purple"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <RelativeLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/light_blue"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="0dp">
+
+            <ImageView
+                android:id="@+id/image_bcom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="6dp"
+                app:srcCompat="@drawable/calculating" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bcom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="B.Com"
+            android:fontFamily="@font/alata"
+
+            android:textColor="@color/dark_purple"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+        <RelativeLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/light_yellow"
+            android:padding="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+            tools:layout_editor_absoluteY="0dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imagebsc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="6dp"
+                app:srcCompat="@drawable/microscope" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/alata"
+            android:text="B.Com"
+            android:textColor="@color/dark_purple"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+        <RelativeLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/light_pink"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imagebba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="6dp"
+                app:srcCompat="@drawable/portfolio" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="BBA"
+            android:fontFamily="@font/alata"
+            android:textColor="@color/dark_purple"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/secondcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="24dp"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web Development"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:padding="5dp"
+                android:fontFamily="@font/robotocondensed_bold"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="7dp"
+                android:layout_toEndOf="@+id/textView8"
+                android:fontFamily="@font/alata"
+                android:padding="5dp"
+                android:text="View All"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.05"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                tools:ignore="TextSizeCheck" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            >
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/thirdcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="24dp"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Language"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:padding="5dp"
+                android:fontFamily="@font/robotocondensed_bold"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="7dp"
+                android:layout_toEndOf="@+id/textView10"
+                android:fontFamily="@font/alata"
+                android:padding="5dp"
+                android:text="View All"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="TextSizeCheck" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/languageview"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="280dp" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fourthcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="24dp"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Database"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:padding="5dp"
+                android:fontFamily="@font/robotocondensed_bold"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="7dp"
+                android:layout_toEndOf="@+id/textView12"
+                android:padding="5dp"
+                android:fontFamily="@font/alata"
+                android:text="View All"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/databaseview"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="120dp" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fifthcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/feedback">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/dark_purple"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotocondensed_bold"
+                android:padding="5dp"
+                android:text="Feedback"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="1dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="28dp"
+                android:text="Email Id"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/robotoregular"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/editemail"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="22dp"
+                android:layout_below="@id/textView16"
+                android:background="@drawable/edittextbg"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/alata"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/dark_purple"
+                android:textColorHint="@color/dark_purple"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="28dp"
+                android:text="Subject"
+                android:layout_below="@+id/editemail"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/robotoregular"/>
+
+            <EditText
+                android:id="@+id/editsubject"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/textView17"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/edittextbg"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/alata"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/dark_purple"
+                android:textColorHint="@color/dark_purple"
+                android:textSize="16sp" />
 
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="28dp"
+                android:text="Message"
+                android:layout_below="@+id/editsubject"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/robotoregular"
+                tools:ignore="DuplicateIds" />
+
+            <EditText
+                android:id="@+id/editmessage"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/textView18"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/edittextbg"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/alata"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/dark_purple"
+                android:textColorHint="@color/dark_purple"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/editmessage"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/robotocondensed_bold"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Submit" />
+
+        </RelativeLayout>
 
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sixthcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="20dp"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/social"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imagelink"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/linkedin" />
+
+            <ImageView
+                android:id="@+id/imageinsta2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/imagelink"
+                app:srcCompat="@drawable/instagram" />
+
+            <ImageView
+                android:id="@+id/imagefb"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_toRightOf="@+id/imageinsta2"
+                android:layout_marginLeft="30dp"
+                app:srcCompat="@drawable/facebook" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
 
 </ScrollView>
+
+</RelativeLayout>
