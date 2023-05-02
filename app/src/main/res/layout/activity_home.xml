@@ -14,7 +14,7 @@
 android:layout_width="match_parent"
 android:layout_height="175dp"
 android:elevation="2dp"
-android:background="@color/light_blue"
+android:background="@drawable/hometop"
 android:orientation="vertical">
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -88,7 +88,7 @@ android:layout_height="wrap_content">
         android:layout_height="wrap_content"
         android:layout_marginLeft="33dp"
         android:background="@color/white"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="195dp"
         android:layout_marginRight="33dp"
         android:outlineAmbientShadowColor="@color/black">
 
@@ -98,7 +98,7 @@ android:layout_height="wrap_content">
             android:id="@+id/linearLayout"
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
-            android:background="@color/dark_purple"
+            android:background="@drawable/blue_box"
             android:padding="8dp"
             tools:ignore="MissingConstraints">
 
@@ -133,7 +133,7 @@ android:layout_height="wrap_content">
             android:id="@+id/linearLayout3"
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
-            android:background="@color/light_blue"
+            android:background="@drawable/green_box"
             android:padding="8dp"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
             app:layout_constraintStart_toEndOf="@+id/linearLayout"
@@ -171,7 +171,7 @@ android:layout_height="wrap_content">
             android:id="@+id/linearLayout4"
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
-            android:background="@color/light_yellow"
+            android:background="@drawable/creambox"
             android:padding="8dp"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
             app:layout_constraintStart_toEndOf="@+id/linearLayout3"
@@ -208,7 +208,7 @@ android:layout_height="wrap_content">
             android:id="@+id/linearLayout2"
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
-            android:background="@color/light_pink"
+            android:background="@drawable/greybox"
             android:padding="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="MissingConstraints">
@@ -432,11 +432,8 @@ android:layout_height="wrap_content">
         android:id="@+id/fifthcontainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:layout_marginRight="20dp"
         android:paddingLeft="15dp"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/feedback">
 
 
@@ -444,7 +441,7 @@ android:layout_height="wrap_content">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:background="@color/dark_purple"
+            android:background="@drawable/feedback"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
@@ -475,7 +472,7 @@ android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/editemail"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="37dp"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="22dp"
@@ -505,7 +502,7 @@ android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/editsubject"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="43dp"
                 android:layout_below="@+id/textView17"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="5dp"
@@ -529,7 +526,7 @@ android:layout_height="wrap_content">
                 android:text="Message"
                 android:layout_below="@+id/editsubject"
                 android:textAllCaps="true"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/robotoregular"
                 tools:ignore="DuplicateIds" />
@@ -537,7 +534,7 @@ android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/editmessage"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
+                android:layout_height="58dp"
                 android:layout_below="@+id/textView18"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="5dp"
@@ -552,8 +549,8 @@ android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/submit"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
                 android:layout_below="@+id/editmessage"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="24dp"
@@ -564,31 +561,13 @@ android:layout_height="wrap_content">
                 android:textColor="@color/white"
                 android:text="Submit" />
 
-        </RelativeLayout>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/sixthcontainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:paddingLeft="15dp"
-        android:layout_marginBottom="20dp"
-        >
-
-
-        <RelativeLayout
-            android:id="@+id/social"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginHorizontal="10dp"
-            android:gravity="center"
-            tools:ignore="MissingConstraints">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="100dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/submit">
 
             <ImageView
                 android:id="@+id/imagelink"
@@ -601,6 +580,7 @@ android:layout_height="wrap_content">
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginLeft="30dp"
+                android:layout_below="@+id/submit"
                 android:layout_toRightOf="@+id/imagelink"
                 app:srcCompat="@drawable/instagram" />
 
@@ -608,11 +588,17 @@ android:layout_height="wrap_content">
                 android:id="@+id/imagefb"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:layout_below="@+id/submit"
                 android:layout_toRightOf="@+id/imageinsta2"
                 android:layout_marginLeft="30dp"
                 app:srcCompat="@drawable/facebook" />
+            </RelativeLayout>
+
         </RelativeLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </LinearLayout>
 
