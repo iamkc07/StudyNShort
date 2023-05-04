@@ -133,7 +133,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     }else {
                         firebaseUser.sendEmailVerification();
-                        mAuth.signOut();;
+                        mAuth.signOut();
                         showAlertDialog();
                     }
 
@@ -176,17 +176,17 @@ public class LoginActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
- @Override
-    protected void onStart() {
-        super.onStart();
-        if (mAuth.getCurrentUser() != null){
-            Toast.makeText(LoginActivity.this, "Already logged In", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-            finish();
-        }else {
-            Toast.makeText(LoginActivity.this, "You can logged now", Toast.LENGTH_SHORT).show();
-
-        }
-
-    }
+// @Override
+//    protected void onStart() {
+//        super.onStart();
+//        if (mAuth.getCurrentUser() != null){
+//            Toast.makeText(LoginActivity.this, "Already logged In", Toast.LENGTH_SHORT).show();
+//            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+//            finish();
+//        }else {
+//            Toast.makeText(LoginActivity.this, "You can logged now", Toast.LENGTH_SHORT).show();
+//
+//        }
+//
+//    }
 }

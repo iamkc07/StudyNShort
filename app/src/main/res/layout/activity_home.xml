@@ -75,7 +75,7 @@ android:orientation="vertical">
 
 <ScrollView
 android:layout_width="match_parent"
-android:layout_height="wrap_content">
+android:layout_height="match_parent">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -122,7 +122,6 @@ android:layout_height="wrap_content">
             android:gravity="center"
             android:text="BCA"
             android:fontFamily="@font/alata"
-
             android:textColor="@color/dark_purple"
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout"
@@ -246,7 +245,7 @@ android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/secondcontainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="40dp"
         android:layout_marginRight="24dp"
@@ -299,7 +298,7 @@ android:layout_height="wrap_content">
                 android:id="@+id/webview"
                 android:layout_width="match_parent"
                 android:background="@color/white"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent" />
 
 
         </LinearLayout>
@@ -308,7 +307,7 @@ android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/thirdcontainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="40dp"
         android:layout_marginRight="24dp"
@@ -349,7 +348,7 @@ android:layout_height="wrap_content">
                 tools:ignore="TextSizeCheck" />
         </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="45dp"
@@ -361,10 +360,10 @@ android:layout_height="wrap_content">
                 android:id="@+id/languageview"
                 android:layout_width="match_parent"
                 android:background="@color/white"
-                android:layout_height="280dp" />
+                android:layout_height="300dp" />
 
 
-        </LinearLayout>
+        </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -393,21 +392,7 @@ android:layout_height="wrap_content">
                 android:textSize="16dp"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="2dp"
-                android:layout_marginEnd="7dp"
-                android:layout_toEndOf="@+id/textView12"
-                android:padding="5dp"
-                android:fontFamily="@font/alata"
-                android:text="View All"
-                android:textAlignment="textEnd"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                app:layout_constraintEnd_toEndOf="parent" />
+
         </RelativeLayout>
 
         <LinearLayout
@@ -582,7 +567,8 @@ android:layout_height="wrap_content">
                 android:layout_marginLeft="30dp"
                 android:layout_below="@+id/submit"
                 android:layout_toRightOf="@+id/imagelink"
-                app:srcCompat="@drawable/instagram" />
+                app:srcCompat="@drawable/instagram"
+                tools:ignore="NotSibling" />
 
             <ImageView
                 android:id="@+id/imagefb"
@@ -591,7 +577,8 @@ android:layout_height="wrap_content">
                 android:layout_below="@+id/submit"
                 android:layout_toRightOf="@+id/imageinsta2"
                 android:layout_marginLeft="30dp"
-                app:srcCompat="@drawable/facebook" />
+                app:srcCompat="@drawable/facebook"
+                tools:ignore="NotSibling" />
             </RelativeLayout>
 
         </RelativeLayout>

@@ -12,6 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class WebAdapter extends RecyclerView.Adapter<WebAdapter.ViewHolder> {
@@ -43,11 +46,13 @@ public class WebAdapter extends RecyclerView.Adapter<WebAdapter.ViewHolder> {
         String description = wedList.get(position).getTextview2();
         String url = wedList.get(position).getSendUrl();
 
+
+
         holder.setData(resource, title, description, url);
         holder.web_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, HtmlPage.class);
+                Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra("imageView", temp.getImageview1());
                 intent.putExtra("textview", temp.getTextview1());
                 intent.putExtra("textview1", temp.getTextview2());
@@ -81,6 +86,8 @@ public class WebAdapter extends RecyclerView.Adapter<WebAdapter.ViewHolder> {
             textView2 = itemView.findViewById(R.id.web_desp);
             textView3 =  itemView.findViewById(R.id.web_url);
             web_card = itemView.findViewById(R.id.web_card);
+            web_card.setNestedScrollingEnabled(false);
+
 
         }
 

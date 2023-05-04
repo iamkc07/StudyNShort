@@ -155,6 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="@font/alata"
                 android:text="Already have a account? Login"
                 android:textColor="@color/dark_purple"

@@ -5,10 +5,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -30,6 +33,9 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView databaseview;
     List<ModelClass>databaseList;
     DatabaseAdapter databaseAdapter;
+    TextView viewAll, viewAll1;
+
+    RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +43,41 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
 
-
         initData();
         initRecycleView();
 
 
+        viewAll = findViewById(R.id.textView9);
+        viewAll1 = findViewById(R.id.textView11);
+
+        viewAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, VeiwAllActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        viewAll1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, VeiwAllActivity1.class);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        relativeLayout = findViewById(R.id.linearLayout);
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, BcaActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -65,10 +101,12 @@ public class HomeActivity extends AppCompatActivity {
         lanList.add(new ModelClass(R.drawable.html, "Html", "Download  all the high quality notes and play quiz to test your knowledge.","https://www.africau.edu/images/default/sample.pdf"));
         lanList.add(new ModelClass(R.drawable.css, "css", "Download  all the high quality notes and play quiz to test your knowledge.","https://icseindia.org/document/sample.pdf"));
         lanList.add(new ModelClass(R.drawable.js, "Javascript", "Download  all the high quality notes and play quiz to test your knowledge.","https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"));
+        lanList.add(new ModelClass(R.drawable.js, "Javascript", "Download  all the high quality notes and play quiz to test your knowledge.","https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"));
 
         databaseList= new ArrayList<>();
         databaseList.add(new ModelClass(R.drawable.html, "Html", "Download  all the high quality notes and play quiz to test your knowledge.","https://www.africau.edu/images/default/sample.pdf"));
         databaseList.add(new ModelClass(R.drawable.css, "css", "Download  all the high quality notes and play quiz to test your knowledge.","https://icseindia.org/document/sample.pdf"));
+        databaseList.add(new ModelClass(R.drawable.js, "Javascript", "Download  all the high quality notes and play quiz to test your knowledge.","https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"));
         databaseList.add(new ModelClass(R.drawable.js, "Javascript", "Download  all the high quality notes and play quiz to test your knowledge.","https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"));
 
 
@@ -87,7 +125,7 @@ public class HomeActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         languageview.setLayoutManager(layoutManager);
-        Ladapter = new LanguageAdapter(lanList);
+        Ladapter = new LanguageAdapter(lanList, getApplicationContext());
         languageview.setAdapter(Ladapter);
         Ladapter.notifyDataSetChanged();
 
@@ -99,5 +137,4 @@ public class HomeActivity extends AppCompatActivity {
         databaseview.setAdapter(databaseAdapter);
         databaseAdapter.notifyDataSetChanged();
     }
-
 }

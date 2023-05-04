@@ -11,7 +11,8 @@
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/splashintro">
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash">
 
     </pl.droidsonroids.gif.GifImageView>
 

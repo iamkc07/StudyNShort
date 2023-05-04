@@ -22,11 +22,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },2500);
+        },1000);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+
             Window window = this.getWindow();
-            window.setStatusBarColor(this.getResources().getColor(R.color.white));
+            window.setStatusBarColor(this.getResources().getColor(R.color.light_blue));
         }
     }
 }
