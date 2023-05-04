@@ -19,7 +19,6 @@ public class BcaAdapter extends RecyclerView.Adapter<BcaAdapter.ItemVeiwHolder> 
 
     private List<SubjectModel> sList;
     private List<String> list;
-
     public BcaAdapter(List<SubjectModel> sList){
         this.sList = sList;
     }
