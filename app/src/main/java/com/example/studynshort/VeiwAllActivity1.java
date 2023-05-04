@@ -20,7 +20,7 @@ public class VeiwAllActivity1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_veiw_all);
+        setContentView(R.layout.activity_veiw_all1);
 
         initData();
         initRecycleView();
@@ -28,7 +28,7 @@ public class VeiwAllActivity1 extends AppCompatActivity {
     }
 
     private void initRecycleView() {
-        language_card = findViewById(R.id.view_all);
+        language_card = findViewById(R.id.view_all1);
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         language_card.setLayoutManager(layoutManager);
@@ -40,7 +40,7 @@ public class VeiwAllActivity1 extends AppCompatActivity {
     private void initData() {
         languageListAll = new ArrayList<>();
 
-        languageListAll.add(new ModelClass(R.drawable.html, "Html", "Download  all the high quality notes and play quiz to test your knowledge.", "https://www.africau.edu/images/default/sample.pdf"));
+        languageListAll.add(new ModelClass(R.drawable.html, "Hl", "Download  all the high quality notes and play quiz to test your knowledge.", "https://www.africau.edu/images/default/sample.pdf"));
         languageListAll.add(new ModelClass(R.drawable.css, "css", "Download  all the high quality notes and play quiz to test your knowledge.", "https://icseindia.org/document/sample.pdf"));
         languageListAll.add(new ModelClass(R.drawable.js, "Javascript", "Download  all the high quality notes and play quiz to test your knowledge.", "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"));
         languageListAll.add(new ModelClass(R.drawable.php, "Php", "Download  all the high quality notes and play quiz to test your knowledge.", "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"));

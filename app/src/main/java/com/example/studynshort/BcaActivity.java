@@ -43,9 +43,8 @@ public class BcaActivity extends AppCompatActivity {
         nestedList3.add("Wall Paint");
         nestedList3.add("Furniture");
 
-        sList.add(new SubjectModel(nestedList1 , "Instant Food and Noodles"));
-        sList.add(new SubjectModel( nestedList2,"Stationary"));
-        sList.add(new SubjectModel( nestedList3,"Home Care"));
+        sList.add(new SubjectModel(nestedList1 , "Instant Food and Noodles", "hhhhhhhhhhhh", "hhhhhhhhhhhhh", R.drawable.js));
+
 
         adapter = new BcaAdapter(sList);
         recyclerView.setAdapter(adapter);

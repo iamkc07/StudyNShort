@@ -14,12 +14,10 @@ import java.util.List;
 public class NestedAdapter extends RecyclerView.Adapter<NestedAdapter.NestedViewHolder> {
 
     private List<String> sList;
-    Context context;
-
+   
 
     public NestedAdapter(List<String> sList) {
         this.sList = sList;
-        this.context = context;
     }
 
     @NonNull

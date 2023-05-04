@@ -52,7 +52,7 @@ public class BcaAdapter extends RecyclerView.Adapter<BcaAdapter.ItemVeiwHolder> 
             public void onClick(View view) {
                 model.setExpandable(!model.isExpandable());
                 list = model.getNestedList();
-                notifyDataSetChanged();
+                notifyItemChanged(position);
             }
         });
     }
