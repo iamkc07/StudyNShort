@@ -31,7 +31,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_html_page);
+        setContentView(R.layout.activity_detail);
 
         img = (ImageView)findViewById(R.id.detail_img);
         txt = (TextView)findViewById(R.id.detail_txt);

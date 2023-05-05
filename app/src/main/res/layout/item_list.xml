@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardUseCompatPadding="true"
@@ -22,40 +21,9 @@
             android:background="@drawable/blue"
             android:layout_height="70dp">
 
-            <ImageView
-                android:id="@+id/web_image"
-                android:layout_width="100dp"
-                android:layout_height="150dp"
-                android:src="@drawable/html"
-                android:visibility="gone"
-                android:scaleType="centerCrop"
-                tools:ignore="MissingConstraints" />
-
 
             <TextView
-                android:id="@+id/web_desp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/web_image"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/black"
-                android:textSize="11sp"
-                android:visibility="gone"
-                android:fontFamily="@font/alata"
-                android:text="Download  all the high quality notes and play quiz to test your knowledge."
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/web_url"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:visibility="invisible"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/sub_title"
+                android:id="@+id/itemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -72,7 +40,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/sub_arrow"
+                android:id="@+id/ItemArrow"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="24dp"
@@ -93,7 +61,7 @@
             android:id="@+id/expandable_layout">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/bca_childview"
+                android:id="@+id/itemview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"

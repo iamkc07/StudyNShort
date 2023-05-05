@@ -44,9 +44,6 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
             <RelativeLayout
                 android:layout_width="300dp"
                 android:layout_height="300dp"
@@ -152,7 +149,7 @@
                 tools:layout_editor_absoluteX="43dp"
                 tools:layout_editor_absoluteY="424dp" />
 
-            </ScrollView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>

@@ -6,6 +6,7 @@
     app:cardCornerRadius="10dp"
     app:cardElevation="2dp"
     android:layout_marginHorizontal="7dp"
+    android:id="@+id/database_card"
     >
 
     <RelativeLayout
@@ -36,6 +37,25 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/web_desp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/web_title"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:fontFamily="@font/alata"
+            android:visibility="invisible"
+            android:text="Download" />
+
+        <TextView
+            android:id="@+id/web_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible"
+            />
 
 
     </RelativeLayout>

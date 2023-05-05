@@ -73,7 +73,7 @@ public class HomeActivity extends AppCompatActivity {
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, BcaActivity.class);
+                Intent intent = new Intent(HomeActivity.this, BcaNotesActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
@@ -133,7 +133,7 @@ public class HomeActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.HORIZONTAL);
         databaseview.setLayoutManager(layoutManager);
-        databaseAdapter = new DatabaseAdapter(databaseList);
+        databaseAdapter = new DatabaseAdapter(databaseList, getApplicationContext());
         databaseview.setAdapter(databaseAdapter);
         databaseAdapter.notifyDataSetChanged();
     }

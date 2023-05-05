@@ -16,7 +16,7 @@
         android:windowSoftInputMode="adjustResize"
         tools:targetApi="31">
         <activity
-            android:name=".BcaActivity"
+            android:name=".BcaNotesActivity"
             android:exported="false" />
         <activity
             android:name=".VeiwAllActivity1"
