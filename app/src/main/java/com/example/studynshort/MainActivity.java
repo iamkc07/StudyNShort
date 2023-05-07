@@ -2,36 +2,33 @@ package com.example.studynshort;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
-import android.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
-    Toolbar toolbar;
+
     Handler handler;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView =findViewById(R.id.navigation_view);
 
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+
+
         handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
