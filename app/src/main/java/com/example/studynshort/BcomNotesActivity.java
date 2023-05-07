@@ -14,7 +14,7 @@ import android.widget.RelativeLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BcaNotesActivity extends AppCompatActivity {
+public class BcomNotesActivity extends AppCompatActivity {
 
     RecyclerView semViewI;
 
@@ -22,37 +22,37 @@ public class BcaNotesActivity extends AppCompatActivity {
 
     LinearLayout linearLayoutI, linearLayoutII, linearLayoutIII, linearLayoutIV, linearLayoutV, linearLayoutVI;
     LinearLayoutManager layoutManager;
-    List<ModelClass> semBcaList;
+    List<ModelClass> semBcomList;
     SemAdapterI semAdapterI;
 
 
     RecyclerView semViewII;
-    List<ModelClass>semBcaListII;
+    List<ModelClass>semBcomListII;
     SemAdapterII semAdapterII;
 
     RecyclerView semViewIII;
-    List<ModelClass>semBcaListIII;
+    List<ModelClass>semBcomListIII;
     SemAdapterIII semAdapterIII;
 
     RecyclerView semViewIV;
-    List<ModelClass>semBcaListIV;
+    List<ModelClass>semBcomListIV;
     SemAdapterIV semAdapterIV;
 
     RecyclerView semViewV;
-    List<ModelClass>semBcaListV;
+    List<ModelClass>semBcomListV;
     SemAdapterV semAdapterV;
 
     RecyclerView semViewVI;
-    List<ModelClass>semBcaListVI;
+    List<ModelClass>semBcomListVI;
     SemAdapterVI semAdapterVI;
 
-  ImageView semIArrow, semIIArrow, semIIIArrow, semIVArrow, semVArrow, semVIArrow;
+    ImageView semIArrow, semIIArrow, semIIIArrow, semIVArrow, semVArrow, semVIArrow;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bca_notes);
+        setContentView(R.layout.activity_bcom_notes);
 
         linearLayoutI = findViewById(R.id.linearLayoutI);
         linearLayoutII = findViewById(R.id.linearLayoutII);
@@ -163,31 +163,35 @@ public class BcaNotesActivity extends AppCompatActivity {
 
     private void initData() {
 
-        semBcaList = new ArrayList<>();
-        semBcaList.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
-        semBcaList.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomList = new ArrayList<>();
+        semBcomList.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
+        semBcomList.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomList.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomList.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomList.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
 
 
-        semBcaListII = new ArrayList<>();
-        semBcaListII.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
-        semBcaListII.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomListII = new ArrayList<>();
+        semBcomListII.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
+        semBcomListII.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
 
-        semBcaListIII = new ArrayList<>();
-        semBcaListIII.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
-        semBcaListIII.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomListIII = new ArrayList<>();
+        semBcomListIII.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
+        semBcomListIII.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomListIII.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
 
-        semBcaListIV = new ArrayList<>();
-        semBcaListIV.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
-        semBcaListIV.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
-        semBcaListIV.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomListIV = new ArrayList<>();
+        semBcomListIV.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
+        semBcomListIV.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomListIV.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
 
-        semBcaListV = new ArrayList<>();
-        semBcaListV.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
-        semBcaListV.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomListV = new ArrayList<>();
+        semBcomListV.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
+        semBcomListV.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
 
-        semBcaListVI = new ArrayList<>();
-        semBcaListVI.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
-        semBcaListVI.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcomListVI = new ArrayList<>();
+        semBcomListVI.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
+        semBcomListVI.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -196,7 +200,7 @@ public class BcaNotesActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         semViewI.setLayoutManager(layoutManager);
-        semAdapterI = new SemAdapterI(semBcaList, getApplicationContext());
+        semAdapterI = new SemAdapterI(semBcomList, getApplicationContext());
         semViewI.setAdapter(semAdapterI);
         semAdapterI.notifyDataSetChanged();
 
@@ -204,7 +208,7 @@ public class BcaNotesActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         semViewII.setLayoutManager(layoutManager);
-        semAdapterII = new SemAdapterII(semBcaListII, getApplicationContext());
+        semAdapterII = new SemAdapterII(semBcomListII, getApplicationContext());
         semViewII.setAdapter(semAdapterII);
         semAdapterII.notifyDataSetChanged();
 
@@ -213,7 +217,7 @@ public class BcaNotesActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         semViewIII.setLayoutManager(layoutManager);
-        semAdapterIII = new SemAdapterIII(semBcaListIII, getApplicationContext());
+        semAdapterIII = new SemAdapterIII(semBcomListII, getApplicationContext());
         semViewIII.setAdapter(semAdapterIII);
         semAdapterIII.notifyDataSetChanged();
 
@@ -221,7 +225,7 @@ public class BcaNotesActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         semViewIV.setLayoutManager(layoutManager);
-        semAdapterIV = new SemAdapterIV(semBcaListIV, getApplicationContext());
+        semAdapterIV = new SemAdapterIV(semBcomListIV, getApplicationContext());
         semViewIV.setAdapter(semAdapterIV);
         semAdapterIV.notifyDataSetChanged();
 
@@ -229,7 +233,7 @@ public class BcaNotesActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         semViewV.setLayoutManager(layoutManager);
-        semAdapterV = new SemAdapterV(semBcaListV, getApplicationContext());
+        semAdapterV = new SemAdapterV(semBcomListV, getApplicationContext());
         semViewV.setAdapter(semAdapterV);
         semAdapterV.notifyDataSetChanged();
 
@@ -237,7 +241,7 @@ public class BcaNotesActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         semViewVI.setLayoutManager(layoutManager);
-        semAdapterVI = new SemAdapterVI(semBcaListVI, getApplicationContext());
+        semAdapterVI = new SemAdapterVI(semBcomListVI, getApplicationContext());
         semViewVI.setAdapter(semAdapterVI);
         semAdapterVI.notifyDataSetChanged();
 

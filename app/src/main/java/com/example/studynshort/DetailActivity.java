@@ -3,7 +3,9 @@ package com.example.studynshort;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.app.DownloadManager;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,6 +27,7 @@ public class DetailActivity extends AppCompatActivity {
 
     TextView getUri;
 
+
     Button btn;
     Button btn1;
     @SuppressLint("MissingInflatedId")
@@ -33,15 +36,19 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+
+
         img = (ImageView)findViewById(R.id.detail_img);
         txt = (TextView)findViewById(R.id.detail_txt);
         txt1 = (TextView)findViewById(R.id.detail_desp);
         getUri = (TextView)findViewById(R.id.detail_url);
 
+
         img.setImageResource(getIntent().getIntExtra("imageView", 0));
         txt.setText(getIntent().getStringExtra("textview"));
         txt1.setText(getIntent().getStringExtra("textview1"));
         getUri.setText(getIntent().getStringExtra("url"));
+
 
 
         btn1 = findViewById(R.id.detail_dwd);

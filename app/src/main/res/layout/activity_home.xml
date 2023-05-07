@@ -218,7 +218,7 @@ android:layout_height="match_parent">
             android:layout_weight="1"
             android:gravity="center"
             android:fontFamily="@font/alata"
-            android:text="B.Com"
+            android:text="BSc"
             android:textColor="@color/dark_purple"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
@@ -569,38 +569,41 @@ android:layout_height="match_parent">
                 android:text="Submit" />
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="100dp"
+                android:layout_below="@+id/submit"
+
+             android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="35dp"
-                android:layout_marginBottom="20dp"
-                android:layout_below="@+id/submit">
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="20dp">
 
-            <ImageView
-                android:id="@+id/imagelink"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                app:srcCompat="@drawable/linkedin" />
+                <ImageView
+                    android:id="@+id/imagelink"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/linkedin" />
 
-            <ImageView
-                android:id="@+id/imageinsta2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="30dp"
-                android:layout_below="@+id/submit"
-                android:layout_toRightOf="@+id/imagelink"
-                app:srcCompat="@drawable/instagram"
-                tools:ignore="NotSibling" />
+                <ImageView
+                    android:id="@+id/imageinsta2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/submit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/imagelink"
+                    app:srcCompat="@drawable/instagram"
+                    tools:ignore="NotSibling" />
 
-            <ImageView
-                android:id="@+id/imagefb"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_below="@+id/submit"
-                android:layout_toRightOf="@+id/imageinsta2"
-                android:layout_marginLeft="30dp"
-                app:srcCompat="@drawable/facebook"
-                tools:ignore="NotSibling" />
+                <ImageView
+                    android:id="@+id/imagefb"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/submit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/imageinsta2"
+                    app:srcCompat="@drawable/facebook"
+                    tools:ignore="NotSibling" />
             </RelativeLayout>
 
         </RelativeLayout>

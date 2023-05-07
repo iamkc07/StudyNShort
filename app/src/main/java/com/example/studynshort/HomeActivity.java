@@ -9,10 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -42,7 +46,13 @@ public class HomeActivity extends AppCompatActivity {
     DatabaseAdapter databaseAdapter;
     TextView viewAll, viewAll1;
 
-    RelativeLayout relativeLayout;
+    EditText  ourEmail, subject, message;
+
+    ImageView instaImg, fbimg, linkedinimg;
+
+    Button submit;
+
+    RelativeLayout relativeLayoutI, relativeLayoutII, relativeLayoutIII, relativeLayoutIV;
 
 
     @Override
@@ -57,6 +67,45 @@ public class HomeActivity extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        instaImg = findViewById(R.id.imageinsta2);
+        fbimg = findViewById(R.id.imagefb);
+        linkedinimg = findViewById(R.id.imagelink);
+
+        ourEmail = findViewById(R.id.editemail);
+        subject = findViewById(R.id.editsubject);
+        message = findViewById(R.id.editmessage);
+        submit = findViewById(R.id.submit);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String subJect = subject.getText().toString();
+                String messAge = message.getText().toString();
+                String myemail = ourEmail.getText().toString();
+            }
+        });
+
+        instaImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.instagram.com/thekaranchaurasiya");
+            }
+        });
+
+        fbimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.facebook.com/thekaranchaurasiya");
+            }
+        });
+
+        linkedinimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.linkedin.com/in/iamkc0710");
+            }
+        });
 
 
         initData();
@@ -85,11 +134,41 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        relativeLayout = findViewById(R.id.linearLayout);
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
+        relativeLayoutI = findViewById(R.id.linearLayout);
+        relativeLayoutI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, BcaNotesActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        relativeLayoutII = findViewById(R.id.linearLayout3);
+        relativeLayoutII.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, BcomNotesActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        relativeLayoutIII = findViewById(R.id.linearLayout4);
+        relativeLayoutIII.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, BscNotesActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        relativeLayoutIV = findViewById(R.id.linearLayout2);
+        relativeLayoutIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, BbaNotesActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
@@ -102,6 +181,11 @@ public class HomeActivity extends AppCompatActivity {
             window.setStatusBarColor(this.getResources().getColor(R.color.light_blue));
         }
 
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 
     private void initData() {

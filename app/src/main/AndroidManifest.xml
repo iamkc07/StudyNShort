@@ -16,6 +16,15 @@
         android:windowSoftInputMode="adjustResize"
         tools:targetApi="31">
         <activity
+            android:name=".BbaNotesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BscNotesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BcomNotesActivity"
+            android:exported="false" />
+        <activity
             android:name=".BcaNotesActivity"
             android:exported="false" />
         <activity

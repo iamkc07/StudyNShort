@@ -8,11 +8,14 @@ public class ModelClass {
     private String textview2;
     private String sendUrl;
 
+    private Boolean isExpandable;
+
     public ModelClass(int imageview1, String textview1, String textview2, String sendUrl) {
         this.imageview1 = imageview1;
         this.textview1 = textview1;
         this.textview2 = textview2;
         this.sendUrl = sendUrl;
+        isExpandable = false;
     }
 
     public int getImageview1() {
@@ -29,5 +32,13 @@ public class ModelClass {
 
     public String getSendUrl() {
         return sendUrl;
+    }
+
+    public Boolean getExpandable() {
+        return isExpandable;
+    }
+
+    public void setExpandable(Boolean expandable) {
+        isExpandable = expandable;
     }
 }

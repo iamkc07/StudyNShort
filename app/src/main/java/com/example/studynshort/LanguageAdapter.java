@@ -44,6 +44,7 @@ import java.util.List;
 
 
             holder.setData(resource, title, description, url);
+
             holder.language_card.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

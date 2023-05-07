@@ -17,31 +17,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/back_page"
-                android:layout_width="35dp"
-                android:layout_height="42dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="6dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/arrow"
-                tools:ignore="MissingConstraints" />
-
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/alata"
+                android:gravity="bottom|center"
                 android:text="Programming Language"
                 android:textColor="@color/dark_purple"
-                android:textSize="17sp"
+                android:textSize="19sp"
                 android:textStyle="bold"
-                android:fontFamily="@font/alata"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.429"
-                app:layout_constraintStart_toEndOf="@+id/back_page"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <RelativeLayout
