@@ -34,13 +34,14 @@ android:orientation="vertical">
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:id="@+id/toolbar"
-        android:background="@color/light_blue"
+        android:background="@null"
         android:theme="@style/Animation.Design.BottomSheetDialog"
-        app:titleTextColor="#ffffff"
+        app:titleTextColor="@color/black"
         app:titleMarginStart="10dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
         android:layout_marginBottom="5dp"
         tools:ignore="MissingConstraints"/>
 
