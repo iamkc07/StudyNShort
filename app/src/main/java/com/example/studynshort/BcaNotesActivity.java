@@ -179,7 +179,7 @@ public class BcaNotesActivity extends AppCompatActivity {
         semBcaListIV = new ArrayList<>();
         semBcaListIV.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
         semBcaListIV.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
-        semBcaListIV.add(new ModelClass(R.drawable.css,"Html","Dow-ml", "kkk"));
+        semBcaListIV.add(new ModelClass(R.drawable.css,"Html ","Dow-ml", "kkk"));
 
         semBcaListV = new ArrayList<>();
         semBcaListV.add(new ModelClass(R.drawable.html,"Html","ssss-sss", "https://www.africau.edu/images/default/sample.pdf"));
