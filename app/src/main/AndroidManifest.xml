@@ -16,7 +16,19 @@
         android:windowSoftInputMode="adjustResize"
         tools:targetApi="31">
         <activity
+            android:name=".QuizResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuizOptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuizGameActivity"
+            android:exported="false" />
+        <activity
             android:name=".BbaNotesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowPdf"
             android:exported="false" />
         <activity
             android:name=".BscNotesActivity"

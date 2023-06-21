@@ -19,6 +19,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class DetailActivity extends AppCompatActivity {
 
     ImageView img;
@@ -26,6 +29,8 @@ public class DetailActivity extends AppCompatActivity {
     TextView txt1;
 
     TextView getUri;
+
+    FirebaseAuth mAuth;
 
 
     Button btn;
@@ -51,28 +56,47 @@ public class DetailActivity extends AppCompatActivity {
 
 
 
-        btn1 = findViewById(R.id.detail_dwd);
+        btn = findViewById(R.id.detail_view);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 String getUrl = getUri.getText().toString();
-                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(getUrl));
-                String title = URLUtil.guessFileName(getUrl, null, null);
-                request.setTitle(title);
-                request.setDescription("Download");
-
-                String cookie = CookieManager.getInstance().getCookie(getUrl);
-                request.addRequestHeader("cookie", cookie);
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, title);
-
-                DownloadManager downloadManager = (DownloadManager)getSystemService(DOWNLOAD_SERVICE);
-                downloadManager.enqueue(request);
-
-                Toast.makeText(DetailActivity.this, "Downloading Started..", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DetailActivity.this, ShowPdf.class);
+                intent.putExtra("Name", getUrl);
+                startActivity(intent);
             }
         });
+
+        ImageView back;
+        back = findViewById(R.id.imageView2);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+//
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String getUrl = getUri.getText().toString();
+//                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(getUrl));
+//                String title = URLUtil.guessFileName(getUrl, null, null);
+//                request.setTitle(title);
+//                request.setDescription("Download");
+//
+//                String cookie = CookieManager.getInstance().getCookie(getUrl);
+//                request.addRequestHeader("cookie", cookie);
+//                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+//                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, title);
+//
+//                DownloadManager downloadManager = (DownloadManager)getSystemService(DOWNLOAD_SERVICE);
+//                downloadManager.enqueue(request);
+//
+//                Toast.makeText(DetailActivity.this, "Downloading Started..", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
     }
 

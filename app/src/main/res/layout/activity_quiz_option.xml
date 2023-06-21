@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".QuizOptionActivity">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hometop">
+
+
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/robotocondensed_bold"
+            android:letterSpacing="0.1"
+            android:text="Question"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="@drawable/edittextbg"
+            android:fontFamily="@font/alata"
+            android:gravity="center"
+            android:text="Android Button Background Color Not changing, Tech Bholi presents how to solve android studio button background color not changing problem easily. "
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/outofQ"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/question"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/robotocondensed_bold"
+            android:gravity="center"
+            android:text="1/5"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_marginBottom="5dp"
+            tools:ignore="NotSibling" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relativeLayoutI"
+        android:layout_marginTop="15dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayoutI">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="center"
+            android:layout_marginTop="70dp">
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/optionContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/alata"
+                    android:textSize="18sp"
+                    android:background="@drawable/option_box"
+                    android:text="Button" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnA"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/alata"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:background="@drawable/option_box"
+                    android:layout_marginBottom="15dp"
+                    android:text="Button" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnB"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/alata"
+                    android:textColor="@color/black"
+                    android:background="@drawable/option_box"
+                    android:layout_marginBottom="15dp"
+                    android:text="Button" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnD"
+                    android:layout_width="match_parent"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/option_box"
+                    android:fontFamily="@font/alata"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/btnC"
+                    android:text="Button" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/optionContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/nextbtn"
+                    android:layout_width="150dp"
+                    android:enabled="false"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bgbtn"
+                    android:fontFamily="@font/alata"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="70dp"
+                    android:text="Next" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

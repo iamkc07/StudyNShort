@@ -10,13 +10,15 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="250dp"
-        android:layout_height="match_parent"
-        android:id="@+id/navigation_view"
-        app:headerLayout="@layout/headerfile"
-        app:menu="@menu/sidemenu"
-        android:layout_gravity="start"/>
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/navigation_view"-->
+<!--        app:headerLayout="@layout/headerfile"-->
+<!--        app:menu="@menu/sidemenu"-->
+<!--        android:layout_gravity="start"/>-->
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -24,8 +26,9 @@
 
 
 <LinearLayout
+android:id="@+id/top"
 android:layout_width="match_parent"
-android:layout_height="175dp"
+android:layout_height="192dp"
 android:elevation="2dp"
 android:background="@drawable/hometop"
 android:orientation="vertical">
@@ -33,32 +36,50 @@ android:orientation="vertical">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
-        android:background="@null"
-        android:theme="@style/Animation.Design.BottomSheetDialog"
-        app:titleTextColor="@color/black"
-        app:titleMarginStart="10dp"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark"
-        android:layout_marginBottom="5dp"
-        tools:ignore="MissingConstraints"/>
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:background="@null"-->
+<!--        android:theme="@style/Animation.Design.BottomSheetDialog"-->
+<!--        app:titleTextColor="@color/black"-->
+<!--        app:titleMarginStart="10dp"-->
+<!--        app:theme="@style/ThemeOverlay.AppCompat.Dark"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        tools:ignore="MissingConstraints"/>-->
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="38dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="8dp"
+        android:id="@+id/logo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
+        android:padding="5dp"
         android:paddingLeft="6dp"
+        android:src="@drawable/topappicon"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/signout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:padding="5dp"
+        android:paddingLeft="6dp"
+        android:src="@drawable/baseline_logout_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="65dp"
         android:fontFamily="@font/amarante"
         android:text="Get A Notes"
         android:textColor="@color/dark_purple"
@@ -76,6 +97,8 @@ android:orientation="vertical">
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:maxLines="1"
+        android:inputType="text"
         android:background="@drawable/serachbox"
         android:drawableEnd="@drawable/baseline_search_24"
         android:drawablePadding="6dp"
@@ -96,7 +119,24 @@ android:orientation="vertical">
 
 </LinearLayout>
 
+<RelativeLayout
+    android:id="@+id/search"
+    android:layout_below="@+id/top"
+    android:layout_width="match_parent"
+    android:layout_marginStart="20dp"
+    android:visibility="invisible"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="20dp"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
+
 <ScrollView
+android:id="@+id/Scrolldata"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
 
@@ -111,7 +151,7 @@ android:layout_height="match_parent">
         android:layout_height="wrap_content"
         android:layout_marginLeft="33dp"
         android:background="@color/white"
-        android:layout_marginTop="195dp"
+        android:layout_marginTop="225dp"
         android:layout_marginRight="33dp"
         android:outlineAmbientShadowColor="@color/black">
 
@@ -400,40 +440,29 @@ android:layout_height="match_parent">
 
 
         <RelativeLayout
+            android:id="@+id/quizbox"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white">
+            android:layout_height="70dp"
+            android:background="@drawable/green_box"
+            tools:ignore="MissingConstraints">
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Database"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:text="Quiz"
                 android:textColor="@color/black"
                 android:textAllCaps="true"
                 android:padding="5dp"
                 android:fontFamily="@font/robotocondensed_bold"
-                android:textSize="16dp"
+                android:textSize="30dp"
                 android:textStyle="bold"/>
 
 
         </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="45dp"
-            android:background="@color/white"
-            app:layout_constraintTop_toTopOf="parent"
-            >
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/databaseview"
-                android:layout_width="match_parent"
-                android:background="@color/white"
-                android:layout_height="120dp" />
-
-
-        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

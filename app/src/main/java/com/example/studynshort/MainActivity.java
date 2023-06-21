@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
         handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override

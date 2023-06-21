@@ -25,12 +25,14 @@ public class SplashPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_page);
 
-        skip = (Button)findViewById(R.id.txtskip);
-        skip.setOnClickListener(view -> {
-            Intent intent = new Intent(SplashPage.this, HomeActivity.class);
-            startActivity(intent);
-            finish();
-        });
+//        skip = (Button)findViewById(R.id.txtskip);
+//        skip.setOnClickListener(view -> {
+//            Intent intent = new Intent(SplashPage.this, HomeActivity.class);
+//            startActivity(intent);
+//            finish();
+//        });
+
+        mAuth = FirebaseAuth.getInstance();
 
         Btn = (Button) findViewById(R.id.signinbtn);
         Btn.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +62,14 @@ public class SplashPage extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             Window window = this.getWindow();
             window.setStatusBarColor(this.getResources().getColor(R.color.light_blue));
+        }
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (mAuth.getCurrentUser() != null){
+            startActivity(new Intent(SplashPage.this, HomeActivity.class));
+            finish();
         }
     }
 }
